@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1">
+        <animate attributeName="stop-color" values="#3b82f6;#8b5cf6;#3b82f6" dur="3s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1">
+        <animate attributeName="stop-color" values="#8b5cf6;#3b82f6;#8b5cf6" dur="3s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background circles -->
+  <circle cx="250" cy="250" r="200" fill="none" stroke="url(#grad1)" stroke-width="2" opacity="0.3">
+    <animate attributeName="r" values="200;210;200" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="250" cy="250" r="150" fill="none" stroke="url(#grad1)" stroke-width="2" opacity="0.2">
+    <animate attributeName="r" values="150;160;150" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Monitor/Screen -->
+  <rect x="100" y="150" width="300" height="200" rx="10" fill="#1e293b" stroke="url(#grad1)" stroke-width="3"/>
+  <rect x="110" y="160" width="280" height="170" rx="5" fill="#0f172a"/>
+  
+  <!-- Code lines with typing animation - Multiple variations -->
+  <g id="code-lines">
+    <!-- Snippet 1: JavaScript -->
+    <g id="snippet1">
+      <text x="120" y="185" font-family="monospace" font-size="14">
+        <tspan fill="#3b82f6">const</tspan>
+        <tspan fill="#f59e0b"> learn</tspan>
+        <tspan fill="#fff"> = </tspan>
+        <tspan fill="#10b981">'coding'</tspan>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.02;0.23;0.25" dur="24s" repeatCount="indefinite"/>
+      </text>
+      <text x="120" y="210" font-family="monospace" font-size="14">
+        <tspan fill="#8b5cf6">function</tspan>
+        <tspan fill="#f59e0b"> build</tspan>
+        <tspan fill="#fff">() {</tspan>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.04;0.06;0.23;0.25" dur="24s" repeatCount="indefinite"/>
+      </text>
+      <text x="140" y="235" font-family="monospace" font-size="14">
+        <tspan fill="#fff">return </tspan>
+        <tspan fill="#10b981">'🚀'</tspan>
+        <animate attributeName="opacity" values="0;0;0;1;1;0" keyTimes="0;0.08;0.10;0.12;0.23;0.25" dur="24s" repeatCount="indefinite"/>
+      </text>
+      <text x="120" y="260" font-family="monospace" font-size="14" fill="#fff">}
+        <animate attributeName="opacity" values="0;0;0;0;1;1;0" keyTimes="0;0.12;0.14;0.16;0.23;0.25" dur="24s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    
+    <!-- Snippet 2: Python -->
+    <g id="snippet2">
+      <text x="120" y="185" font-family="monospace" font-size="14">
+        <tspan fill="#8b5cf6">def</tspan>
+        <tspan fill="#f59e0b"> create_wiki</tspan>
+        <tspan fill="#fff">():</tspan>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.25;0.27;0.48;0.5" dur="24s" repeatCount="indefinite"/>
+      </text>
+      <text x="140" y="210" font-family="monospace" font-size="14">
+        <tspan fill="#fff">docs = </tspan>
+        <tspan fill="#10b981">'VitePress'</tspan>
+        <animate attributeName="opacity" values="0;0;0;1;1;0" keyTimes="0;0.29;0.31;0.33;0.48;0.5" dur="24s" repeatCount="indefinite"/>
+      </text>
+      <text x="140" y="235" font-family="monospace" font-size="14">
+        <tspan fill="#fff">return </tspan>
+        <tspan fill="#f59e0b">docs</tspan>
+        <tspan fill="#fff">.deploy()</tspan>
+        <animate attributeName="opacity" values="0;0;0;0;1;1;0" keyTimes="0;0.33;0.35;0.37;0.48;0.5" dur="24s" repeatCount="indefinite"/>
+      </text>
+      <text x="120" y="260" font-family="monospace" font-size="14" fill="#64748b"># Python Wiki
+        <animate attributeName="opacity" values="0;0;0;0;0;1;1;0" keyTimes="0;0.37;0.39;0.41;0.43;0.48;0.5" dur="24s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    
+    <!-- Snippet 3: Docker -->
+    <g id="snippet3">
+      <text x="120" y="185" font-family="monospace" font-size="14">
+        <tspan fill="#64748b">$ </tspan>
+        <tspan fill="#3b82f6">docker</tspan>
+        <tspan fill="#f59e0b"> run</tspan>
+        <tspan fill="#fff"> -d</tspan>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.5;0.52;0.73;0.75" dur="24s" repeatCount="indefinite"/>
+      </text>
+      <text x="140" y="210" font-family="monospace" font-size="14">
+        <tspan fill="#fff">--name </tspan>
+        <tspan fill="#10b981">my-wiki</tspan>
+        <animate attributeName="opacity" values="0;0;0;1;1;0" keyTimes="0;0.54;0.56;0.58;0.73;0.75" dur="24s" repeatCount="indefinite"/>
+      </text>
+      <text x="140" y="235" font-family="monospace" font-size="14">
+        <tspan fill="#fff">-p </tspan>
+        <tspan fill="#f59e0b">3000:3000</tspan>
+        <animate attributeName="opacity" values="0;0;0;0;1;1;0" keyTimes="0;0.58;0.60;0.62;0.73;0.75" dur="24s" repeatCount="indefinite"/>
+      </text>
+      <text x="140" y="260" font-family="monospace" font-size="14" fill="#10b981">vitepress/app
+        <animate attributeName="opacity" values="0;0;0;0;0;1;1;0" keyTimes="0;0.62;0.64;0.66;0.68;0.73;0.75" dur="24s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    
+    <!-- Snippet 4: JavaScript Async -->
+    <g id="snippet4">
+      <text x="120" y="185" font-family="monospace" font-size="14">
+        <tspan fill="#3b82f6">const</tspan>
+        <tspan fill="#f59e0b"> deploy</tspan>
+        <tspan fill="#fff"> = </tspan>
+        <tspan fill="#8b5cf6">async</tspan>
+        <tspan fill="#fff"> =></tspan>
+        <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.75;0.77;1" dur="24s" repeatCount="indefinite"/>
+      </text>
+      <text x="140" y="210" font-family="monospace" font-size="14">
+        <tspan fill="#8b5cf6">await</tspan>
+        <tspan fill="#f59e0b"> build</tspan>
+        <tspan fill="#fff">()</tspan>
+        <animate attributeName="opacity" values="0;0;0;1;1" keyTimes="0;0.79;0.81;0.83;1" dur="24s" repeatCount="indefinite"/>
+      </text>
+      <text x="120" y="235" font-family="monospace" font-size="14" fill="#64748b">// Fast Deploy
+        <animate attributeName="opacity" values="0;0;0;0;1;1" keyTimes="0;0.83;0.85;0.87;0.89;1" dur="24s" repeatCount="indefinite"/>
+      </text>
+      <text x="120" y="260" font-family="monospace" font-size="14">
+        <tspan fill="#fff">console.</tspan>
+        <tspan fill="#f59e0b">log</tspan>
+        <tspan fill="#fff">(</tspan>
+        <tspan fill="#10b981">'Done'</tspan>
+        <tspan fill="#fff">)</tspan>
+        <animate attributeName="opacity" values="0;0;0;0;0;1;1" keyTimes="0;0.87;0.89;0.91;0.93;0.95;1" dur="24s" repeatCount="indefinite"/>
+      </text>
+    </g>
+  </g>
+
+  <!-- Cursor blinking -->
+  <rect x="150" y="268" width="8" height="16" fill="#3b82f6">
+    <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Floating elements -->
+  <g id="floating-icons">
+    <!-- JS icon -->
+    <g>
+      <circle cx="80" cy="100" r="20" fill="#f7df1e" opacity="0.8"/>
+      <text x="80" y="108" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#000">JS</text>
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-10; 0,0" dur="2s" repeatCount="indefinite"/>
+    </g>
+    
+    <!-- Python icon -->
+    <g>
+      <circle cx="420" cy="120" r="20" fill="#3776ab" opacity="0.8"/>
+      <text x="420" y="128" font-family="Arial" font-size="24" text-anchor="middle" fill="#fff">🐍</text>
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,10; 0,0" dur="3s" repeatCount="indefinite"/>
+    </g>
+    
+    <!-- Docker icon -->
+    <g>
+      <circle cx="70" cy="380" r="20" fill="#2496ed" opacity="0.8"/>
+      <text x="70" y="388" font-family="Arial" font-size="24" text-anchor="middle" fill="#fff">🐳</text>
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-8; 0,0" dur="2.5s" repeatCount="indefinite"/>
+    </g>
+    
+    <!-- Code brackets -->
+    <text x="430" y="380" font-family="monospace" font-size="40" fill="url(#grad1)" filter="url(#glow)">
+      &lt;/&gt;
+      <animateTransform attributeName="transform" type="rotate" values="0 430 380; 10 430 380; 0 430 380" dur="3s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- Particles -->
+  <circle cx="150" cy="80" r="3" fill="#3b82f6">
+    <animate attributeName="cy" values="80;400" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="350" cy="100" r="2" fill="#8b5cf6">
+    <animate attributeName="cy" values="100;420" dur="10s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0" dur="10s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="450" cy="200" r="2.5" fill="#10b981">
+    <animate attributeName="cy" values="200;450" dur="9s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0" dur="9s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Keyboard at bottom -->
+  <rect x="150" y="380" width="200" height="80" rx="8" fill="#1e293b" stroke="url(#grad1)" stroke-width="2" opacity="0.6"/>
+  <rect x="160" y="390" width="30" height="25" rx="3" fill="#374151">
+    <animate attributeName="fill" values="#374151;#3b82f6;#374151" dur="1s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="200" y="390" width="30" height="25" rx="3" fill="#374151">
+    <animate attributeName="fill" values="#374151;#3b82f6;#374151" begin="0.2s" dur="1s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="240" y="390" width="30" height="25" rx="3" fill="#374151">
+    <animate attributeName="fill" values="#374151;#3b82f6;#374151" begin="0.4s" dur="1s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="280" y="390" width="30" height="25" rx="3" fill="#374151">
+    <animate attributeName="fill" values="#374151;#3b82f6;#374151" begin="0.6s" dur="1s" repeatCount="indefinite"/>
+  </rect>
+</svg>
