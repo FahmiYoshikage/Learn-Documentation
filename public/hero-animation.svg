@@ -39,21 +39,21 @@
         <tspan fill="#f59e0b"> learn</tspan>
         <tspan fill="#fff"> = </tspan>
         <tspan fill="#10b981">'coding'</tspan>
-        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.02;0.23;0.25" dur="24s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;1;0;0;0;0" keyTimes="0;0.02;0.23;0.25;0.5;0.75;1" dur="24s" repeatCount="indefinite"/>
       </text>
       <text x="120" y="210" font-family="monospace" font-size="14">
         <tspan fill="#8b5cf6">function</tspan>
         <tspan fill="#f59e0b"> build</tspan>
         <tspan fill="#fff">() {</tspan>
-        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.04;0.06;0.23;0.25" dur="24s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0;1;1;0;0;0" keyTimes="0;0.04;0.06;0.23;0.25;0.75;1" dur="24s" repeatCount="indefinite"/>
       </text>
       <text x="140" y="235" font-family="monospace" font-size="14">
         <tspan fill="#fff">return </tspan>
         <tspan fill="#10b981">'🚀'</tspan>
-        <animate attributeName="opacity" values="0;0;0;1;1;0" keyTimes="0;0.08;0.10;0.12;0.23;0.25" dur="24s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0;1;1;0;0;0" keyTimes="0;0.08;0.10;0.23;0.25;0.75;1" dur="24s" repeatCount="indefinite"/>
       </text>
       <text x="120" y="260" font-family="monospace" font-size="14" fill="#fff">}
-        <animate attributeName="opacity" values="0;0;0;0;1;1;0" keyTimes="0;0.12;0.14;0.16;0.23;0.25" dur="24s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0;1;1;0;0;0" keyTimes="0;0.12;0.14;0.23;0.25;0.75;1" dur="24s" repeatCount="indefinite"/>
       </text>
     </g>
     
@@ -63,21 +63,21 @@
         <tspan fill="#8b5cf6">def</tspan>
         <tspan fill="#f59e0b"> create_wiki</tspan>
         <tspan fill="#fff">():</tspan>
-        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.25;0.27;0.48;0.5" dur="24s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0;1;1;0;0;0" keyTimes="0;0.25;0.27;0.48;0.5;0.75;1" dur="24s" repeatCount="indefinite"/>
       </text>
       <text x="140" y="210" font-family="monospace" font-size="14">
         <tspan fill="#fff">docs = </tspan>
         <tspan fill="#10b981">'VitePress'</tspan>
-        <animate attributeName="opacity" values="0;0;0;1;1;0" keyTimes="0;0.29;0.31;0.33;0.48;0.5" dur="24s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0;0;1;1;0;0" keyTimes="0;0.29;0.31;0.48;0.5;0.75;1" dur="24s" repeatCount="indefinite"/>
       </text>
       <text x="140" y="235" font-family="monospace" font-size="14">
         <tspan fill="#fff">return </tspan>
         <tspan fill="#f59e0b">docs</tspan>
         <tspan fill="#fff">.deploy()</tspan>
-        <animate attributeName="opacity" values="0;0;0;0;1;1;0" keyTimes="0;0.33;0.35;0.37;0.48;0.5" dur="24s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0;0;1;1;0;0" keyTimes="0;0.35;0.37;0.48;0.5;0.75;1" dur="24s" repeatCount="indefinite"/>
       </text>
       <text x="120" y="260" font-family="monospace" font-size="14" fill="#64748b"># Python Wiki
-        <animate attributeName="opacity" values="0;0;0;0;0;1;1;0" keyTimes="0;0.37;0.39;0.41;0.43;0.48;0.5" dur="24s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0;0;1;1;0;0" keyTimes="0;0.41;0.43;0.48;0.5;0.75;1" dur="24s" repeatCount="indefinite"/>
       </text>
     </g>
     
@@ -88,20 +88,20 @@
         <tspan fill="#3b82f6">docker</tspan>
         <tspan fill="#f59e0b"> run</tspan>
         <tspan fill="#fff"> -d</tspan>
-        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.5;0.52;0.73;0.75" dur="24s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0;0;1;1;0;0" keyTimes="0;0.25;0.5;0.52;0.73;0.75;1" dur="24s" repeatCount="indefinite"/>
       </text>
       <text x="140" y="210" font-family="monospace" font-size="14">
         <tspan fill="#fff">--name </tspan>
         <tspan fill="#10b981">my-wiki</tspan>
-        <animate attributeName="opacity" values="0;0;0;1;1;0" keyTimes="0;0.54;0.56;0.58;0.73;0.75" dur="24s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0;0;0;1;1;0" keyTimes="0;0.5;0.54;0.56;0.73;0.75;1" dur="24s" repeatCount="indefinite"/>
       </text>
       <text x="140" y="235" font-family="monospace" font-size="14">
         <tspan fill="#fff">-p </tspan>
         <tspan fill="#f59e0b">3000:3000</tspan>
-        <animate attributeName="opacity" values="0;0;0;0;1;1;0" keyTimes="0;0.58;0.60;0.62;0.73;0.75" dur="24s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0;0;0;1;1;0" keyTimes="0;0.5;0.58;0.60;0.73;0.75;1" dur="24s" repeatCount="indefinite"/>
       </text>
       <text x="140" y="260" font-family="monospace" font-size="14" fill="#10b981">vitepress/app
-        <animate attributeName="opacity" values="0;0;0;0;0;1;1;0" keyTimes="0;0.62;0.64;0.66;0.68;0.73;0.75" dur="24s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0;0;0;1;1;0" keyTimes="0;0.5;0.64;0.66;0.73;0.75;1" dur="24s" repeatCount="indefinite"/>
       </text>
     </g>
     
@@ -113,16 +113,16 @@
         <tspan fill="#fff"> = </tspan>
         <tspan fill="#8b5cf6">async</tspan>
         <tspan fill="#fff"> =></tspan>
-        <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.75;0.77;1" dur="24s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0;0;0;1;1;0" keyTimes="0;0.25;0.5;0.75;0.77;0.98;1" dur="24s" repeatCount="indefinite"/>
       </text>
       <text x="140" y="210" font-family="monospace" font-size="14">
         <tspan fill="#8b5cf6">await</tspan>
         <tspan fill="#f59e0b"> build</tspan>
         <tspan fill="#fff">()</tspan>
-        <animate attributeName="opacity" values="0;0;0;1;1" keyTimes="0;0.79;0.81;0.83;1" dur="24s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0;0;0;0;1;1;0" keyTimes="0;0.25;0.5;0.75;0.79;0.81;0.98;1" dur="24s" repeatCount="indefinite"/>
       </text>
       <text x="120" y="235" font-family="monospace" font-size="14" fill="#64748b">// Fast Deploy
-        <animate attributeName="opacity" values="0;0;0;0;1;1" keyTimes="0;0.83;0.85;0.87;0.89;1" dur="24s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0;0;0;0;1;1;0" keyTimes="0;0.25;0.5;0.75;0.83;0.85;0.98;1" dur="24s" repeatCount="indefinite"/>
       </text>
       <text x="120" y="260" font-family="monospace" font-size="14">
         <tspan fill="#fff">console.</tspan>
@@ -130,7 +130,7 @@
         <tspan fill="#fff">(</tspan>
         <tspan fill="#10b981">'Done'</tspan>
         <tspan fill="#fff">)</tspan>
-        <animate attributeName="opacity" values="0;0;0;0;0;1;1" keyTimes="0;0.87;0.89;0.91;0.93;0.95;1" dur="24s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0;0;0;0;1;1;0" keyTimes="0;0.25;0.5;0.75;0.87;0.89;0.98;1" dur="24s" repeatCount="indefinite"/>
       </text>
     </g>
   </g>
