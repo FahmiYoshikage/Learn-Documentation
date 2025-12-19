@@ -531,7 +531,7 @@ Check out our [documentation](https://docs.example.com) for more details.
 
 ## 🤝 Contributing
 
-Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md).
+Contributions are welcome! Feel free to open issues or pull requests.
 
 ## 📄 License
 
