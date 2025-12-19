@@ -40,6 +40,10 @@ export default defineConfig({
                         text: 'Navbar VS Sidebar',
                         link: '/tutorial/navbar-vs-sidebar',
                     },
+                    {
+                        text: 'Cheatsheet',
+                        link: '/tutorial/markdown-cheatsheet',
+                    },
                 ],
             },
         ],
