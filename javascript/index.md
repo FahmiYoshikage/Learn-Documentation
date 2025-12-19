@@ -6,8 +6,6 @@ Kumpulan catatan dan dokumentasi tentang JavaScript.
 
 -   [Dasar JavaScript](./basics)
 -   [Array Methods](./array-methods)
--   [Async/Await](./async-await)
--   [DOM Manipulation](./dom)
 
 ## Kenapa JavaScript?
 

@@ -5,8 +5,6 @@ Catatan tentang Docker containerization.
 ## Topik
 
 -   [Perintah Dasar Docker](./basics)
--   [Dockerfile](./dockerfile)
--   [Docker Compose](./docker-compose)
 
 ## Kenapa Docker?
 

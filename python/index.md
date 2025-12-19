@@ -5,8 +5,6 @@ Dokumentasi dan catatan belajar Python.
 ## Topik
 
 -   [Dasar Python](./basics)
--   [List Comprehension](./list-comprehension)
--   [Decorators](./decorators)
 
 ## Kenapa Python?
 
