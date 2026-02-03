@@ -27,6 +27,13 @@ Dokumentasi ini dibuat sebagai arsip pembelajaran pribadi dalam mendalami keaman
 
 - [Chapter 3: Return Address Overwrite (Ret2Win)](/RE-Binex/Chapter3_Ret2Win)
 - [Chapter 4: Shellcode Injection](/RE-Binex/Chapter4-Shellcode)
+- [Chapter 5: Ret2Libc (Bypassing NX)](/RE-Binex/Chapter5-Ret5Libc)
+
+### Bagian 3: Referensi
+
+- [📋 Glosarium Istilah Exploitation](/RE-Binex/GlosariumExploit)
+- [🐚 Shellcode Reference (execve)](/RE-Binex/Shellcode)
+- [⚙️ System Call Linux x64](/RE-Binex/systemCallLinux64bit)
 
 ## ⭐ Fitur Pembelajaran
 
@@ -80,4 +87,5 @@ Setelah menyelesaikan materi ini, Anda akan mampu:
 - [ ] Chapter 2: Buffer Overflow
 - [ ] Chapter 3: Return Address Overwrite
 - [ ] Chapter 4: Shellcode Injection
+- [ ] Chapter 5: Ret2Libc (Bypassing NX)
       :::
