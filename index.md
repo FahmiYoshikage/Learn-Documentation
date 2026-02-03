@@ -30,26 +30,26 @@ features:
       details: Backend development, data structures, OOP concepts, dan ecosystem Python untuk data science, automation, dan web development.
       link: /python/
       linkText: Start Learning →
+    - icon: �
+      title: RE & Binary Exploitation
+      details: Journey to Binary Exploitation! C programming, memory layout, buffer overflow, ret2win, hingga shellcode injection.
+      link: /RE-Binex/
+      linkText: Hack The Stack →
     - icon: 🐳
       title: Docker & DevOps
       details: Containerization, CI/CD workflows, deployment strategies. Dari basic commands hingga orchestration dengan Docker Compose.
       link: /docker/
       linkText: Start Learning →
+    - icon: 🏴‍☠️
+      title: CTF Writeups
+      details: Solutions dan write-ups untuk challenge CTF, teknik exploitation, dan analysis tools untuk cybersecurity competitions.
+      link: /writeup/
+      linkText: Read Writeups →
     - icon: 📖
       title: VitePress Docs
       details: Meta-documentation! Panduan lengkap membuat wiki seperti ini dengan VitePress, hosting gratis, dan best practices.
       link: /tutorial/panduan-vitepress
       linkText: Lihat Panduan →
-    - icon: 🎯
-      title: Best Practices
-      details: Code quality, design patterns, performance optimization, dan tips-tips praktis dari pengalaman real-world projects.
-      link: /javascript/basics
-      linkText: Coming Soon →
-    - icon: 🔧
-      title: Tools & Tips
-      details: Developer tools, VS Code extensions, terminal productivity, Git workflows, dan tooling yang bikin coding lebih efisien.
-      link: /javascript/basics
-      linkText: Coming Soon →
 ---
 
 <style>
