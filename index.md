@@ -30,7 +30,7 @@ features:
       details: Backend development, data structures, OOP concepts, dan ecosystem Python untuk data science, automation, dan web development.
       link: /python/
       linkText: Start Learning →
-    - icon: �
+    - icon: 📇
       title: RE & Binary Exploitation
       details: Journey to Binary Exploitation! C programming, memory layout, buffer overflow, ret2win, hingga shellcode injection.
       link: /RE-Binex/
