@@ -6,7 +6,6 @@ export default defineConfig({
     description: 'Catatan teknis dan dokumentasi pribadi',
     head: [
         ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
-        ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
     ],
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
@@ -35,12 +34,18 @@ export default defineConfig({
         },
 
         socialLinks: [
-            { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
+            { icon: 'github', link: 'https://github.com/vuejs/https://github.com/FahmiYoshikage' },
         ],
 
         // Search (built-in local search)
         search: {
             provider: 'local',
         },
+
+        // Footer
+        footer: {
+            message: 'Made with ❤️ by FailDeGaskar | <a href="/profile">Lihat Profil Saya</a>',
+            copyright: 'Copyright © ' + new Date().getFullYear() + ' FailDeGaskar'
+        }
     },
 });
