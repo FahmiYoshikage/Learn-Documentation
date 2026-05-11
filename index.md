@@ -10,26 +10,21 @@ hero:
         alt: Coding Animation
     actions:
         - theme: brand
-          text: 🚀 Explore JavaScript
-          link: /javascript/
+          text: 🐳 Explore Docker
+          link: /docker/
         - theme: alt
-          text: 🐍 Explore Python
-          link: /python/
+          text: 📇 RE & Binex
+          link: /RE-Binex/
         - theme: alt
           text: 📖 Baca Panduan
           link: /tutorial/panduan-vitepress
 
 features:
-    - icon: ⚡️
-      title: JavaScript Mastery
-      details: Dari fundamentals hingga advanced patterns. ES6+, async programming, array methods, dan best practices untuk modern web development.
-      link: /javascript/
-      linkText: Start Learning →
-    - icon: 🐍
-      title: Python Power
-      details: Backend development, data structures, OOP concepts, dan ecosystem Python untuk data science, automation, dan web development.
-      link: /python/
-      linkText: Start Learning →
+    - icon: 📚
+      title: Anything & Everything
+      details: Random notes, tips, and tricks. Termasuk setup NPM, Cloudflare, dan dokumentasi lain-lain yang bermanfaat.
+      link: /anything/wildcard-certificate
+      linkText: Explore More →
     - icon: 📇
       title: RE & Binary Exploitation
       details: Journey to Binary Exploitation! C programming, memory layout, buffer overflow, ret2win, hingga shellcode injection.
@@ -229,8 +224,8 @@ features:
 
   <div class="stats-grid">
     <div class="stat-card">
-      <div class="stat-number">3+</div>
-      <div class="stat-label">Programming Languages</div>
+      <div class="stat-number">5+</div>
+      <div class="stat-label">Core Categories</div>
     </div>
     <div class="stat-card">
       <div class="stat-number">15+</div>
@@ -247,38 +242,38 @@ features:
 
 <div class="quick-links">
   <div class="quick-link-card">
-    <a href="/javascript/basics">
-      <span class="quick-link-icon">⚡</span>
+    <a href="/RE-Binex/">
+      <span class="quick-link-icon">📇</span>
       <div class="quick-link-text">
-        <div class="quick-link-title">JavaScript Basics</div>
-        <div class="quick-link-desc">Variables, functions, ES6+</div>
+        <div class="quick-link-title">RE & Binex</div>
+        <div class="quick-link-desc">Reverse Engineering basics</div>
       </div>
     </a>
   </div>
   <div class="quick-link-card">
-    <a href="/javascript/array-methods">
-      <span class="quick-link-icon">🔄</span>
-      <div class="quick-link-text">
-        <div class="quick-link-title">Array Methods</div>
-        <div class="quick-link-desc">map, filter, reduce mastery</div>
-      </div>
-    </a>
-  </div>
-  <div class="quick-link-card">
-    <a href="/python/basics">
-      <span class="quick-link-icon">🐍</span>
-      <div class="quick-link-text">
-        <div class="quick-link-title">Python Fundamentals</div>
-        <div class="quick-link-desc">Core concepts & syntax</div>
-      </div>
-    </a>
-  </div>
-  <div class="quick-link-card">
-    <a href="/docker/basics">
+    <a href="/docker/">
       <span class="quick-link-icon">🐳</span>
       <div class="quick-link-text">
-        <div class="quick-link-title">Docker Commands</div>
+        <div class="quick-link-title">Docker Basics</div>
         <div class="quick-link-desc">Essential container operations</div>
+      </div>
+    </a>
+  </div>
+  <div class="quick-link-card">
+    <a href="/writeup/">
+      <span class="quick-link-icon">🏴‍☠️</span>
+      <div class="quick-link-text">
+        <div class="quick-link-title">CTF Writeups</div>
+        <div class="quick-link-desc">Security challenges solutions</div>
+      </div>
+    </a>
+  </div>
+  <div class="quick-link-card">
+    <a href="/anything/wildcard-certificate">
+      <span class="quick-link-icon">🌐</span>
+      <div class="quick-link-text">
+        <div class="quick-link-title">NPM Setup</div>
+        <div class="quick-link-desc">Wildcard certs via Cloudflare</div>
       </div>
     </a>
   </div>
@@ -301,7 +296,7 @@ Kalau catatan ini bisa membantu orang lain yang sedang belajar, why not? Open kn
 ## 🎯 Cara Navigasi
 
 1. **🔍 Search First** - Tekan `Ctrl/Cmd + K` untuk search cepat
-2. **📑 Browse by Topic** - Pilih JavaScript, Python, atau Docker di navbar
+2. **📑 Browse by Topic** - Pilih RE-Binex, Docker, atau Writeups di navbar
 3. **📋 Use Sidebar** - Di setiap section, sidebar menunjukkan semua halaman available
 4. **🌙 Dark Mode** - Toggle dark/light mode di pojok kanan atas
 5. **🔗 Follow Links** - Setiap halaman punya links ke topik terkait
@@ -310,9 +305,9 @@ Kalau catatan ini bisa membantu orang lain yang sedang belajar, why not? Open kn
   <div class="cta-title">🚀 Ready to Start Learning?</div>
   <p style="color: var(--vp-c-text-2); margin-bottom: 0;">Pilih topik yang ingin kamu pelajari dan mulai eksplorasi!</p>
   <div class="cta-buttons">
-    <a href="/javascript/" class="cta-button" style="color: white !important;">Explore JavaScript</a>
-    <a href="/python/" class="cta-button" style="color: white !important;">Explore Python</a>
+    <a href="/RE-Binex/" class="cta-button" style="color: white !important;">Explore RE & Binex</a>
     <a href="/docker/" class="cta-button" style="color: white !important;">Explore Docker</a>
+    <a href="/writeup/" class="cta-button" style="color: white !important;">Explore Writeups</a>
     <a href="/tutorial/panduan-vitepress" class="cta-button secondary" style="color: var(--vp-c-brand-1) !important;">Baca Panduan</a>
   </div>
 </div>
