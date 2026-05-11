@@ -23,7 +23,7 @@ Berikut adalah beberapa bidang yang rutin saya pelajari dan saya tulis di web in
 
 Jika Anda ingin berdiskusi, bertanya, atau sekadar terhubung, Anda bisa menemukan saya di:
 
-- **GitHub**: [github.com/FailDeGaskar](https://github.com/FailDeGaskar) *(Sesuaikan dengan username Anda)*
+- **GitHub**: [github.com/FahmiYoshikage](https://github.com/FahmiYoshikage)
 - **Email**: [fahmiilham029@gmail.com](mailto:fahmiilham029@gmail.com)
 
 ---
