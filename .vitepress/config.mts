@@ -14,71 +14,14 @@ export default defineConfig({
         // Navigation Bar (top menu)
         nav: [
             { text: 'Home', link: '/' },
-            { text: 'JavaScript', link: '/javascript/' },
-            { text: 'Python', link: '/python/' },
+            { text: 'RE & Binex', link: '/RE-Binex/' },
             { text: 'Docker', link: '/docker/' },
-            {
-                text: 'Panduan',
-                items: [
-                    {
-                        text: 'Panduan VitePress',
-                        link: '/tutorial/panduan-vitepress',
-                    },
-                    {
-                        text: 'Syntax & Fitur',
-                        link: '/tutorial/vitepress-syntax',
-                    },
-                    {
-                        text: 'Struktur Project',
-                        link: '/tutorial/struktur-project',
-                    },
-                    {
-                        text: 'Homapage Customization',
-                        link: '/tutorial/homepage-customization',
-                    },
-                    {
-                        text: 'Navbar VS Sidebar',
-                        link: '/tutorial/navbar-vs-sidebar',
-                    },
-                    {
-                        text: 'Cheatsheet',
-                        link: '/tutorial/markdown-cheatsheet',
-                    },
-                ],
-            },
+            { text: 'CTF Writeups', link: '/writeup/' },
+            { text: 'Anything', link: '/anything/wildcard-certificate' },
         ],
 
         // Sidebar - berbeda untuk setiap section
         sidebar: {
-            // Sidebar untuk section JavaScript
-            '/javascript/': [
-                {
-                    text: 'JavaScript',
-                    items: [
-                        { text: 'Overview', link: '/javascript/' },
-                        {
-                            text: 'Dasar JavaScript',
-                            link: '/javascript/basics',
-                        },
-                        {
-                            text: 'Array Methods',
-                            link: '/javascript/array-methods',
-                        },
-                    ],
-                },
-            ],
-
-            // Sidebar untuk section Python
-            '/python/': [
-                {
-                    text: 'Python',
-                    items: [
-                        { text: 'Overview', link: '/python/' },
-                        { text: 'Dasar Python', link: '/python/basics' },
-                    ],
-                },
-            ],
-
             // Sidebar untuk section Docker
             '/docker/': [
                 {
