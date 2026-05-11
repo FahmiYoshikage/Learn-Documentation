@@ -312,9 +312,3 @@ Kalau catatan ini bisa membantu orang lain yang sedang belajar, why not? Open kn
   </div>
 </div>
 
----
-
-<div style="text-align: center; color: var(--vp-c-text-3); font-size: 0.9rem; margin-top: 3rem;">
-  <p>💻 Built with <a href="https://vitepress.dev" target="_blank">VitePress</a> • Hosted on Digital Ocean • Updated regularly</p>
-  <p style="margin-top: 0.5rem;">Found something helpful? Star ⭐ on GitHub or share with others!</p>
-</div>
