@@ -6,8 +6,8 @@ hero:
     text: Personal Knowledge Base
     tagline: 'Catatan pembelajaran programming: dari konsep dasar hingga praktik production-ready'
     image:
-        src: /hero-animation.svg
-        alt: Coding Animation
+        src: /3.svg
+        alt: FailDeGaskar Logo
     actions:
         - theme: brand
           text: 🐳 Explore Docker
