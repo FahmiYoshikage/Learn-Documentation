@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Docs Connector</title>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/easymde/dist/easymde.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <script src="https://unpkg.com/easymde/dist/easymde.min.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .CodeMirror {
+                height: 500px;
+            }
+        </style>
+    </head>
+    <body class="bg-gray-100 font-sans">
+        <div id="app" class="flex h-screen overflow-hidden">
+            <!-- Sidebar -->
+            <div class="w-64 bg-slate-800 text-white flex flex-col">
+                <div
+                    class="p-4 bg-slate-900 border-b border-slate-700 flex justify-between items-center"
+                >
+                    <h1 class="text-xl font-bold">Docs Connector</h1>
+                </div>
+
+                <div class="p-4 flex-1 overflow-y-auto">
+                    <button
+                        onclick="showNewFileModal()"
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mb-4"
+                    >
+                        + New Document
+                    </button>
+                    <div id="file-structure" class="text-sm"></div>
+                </div>
+
+                <div class="p-4 bg-slate-900">
+                    <button
+                        onclick="syncGit()"
+                        id="syncBtn"
+                        class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-2 px-4 rounded"
+                    >
+                        Git Pull (Sync)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="flex-1 flex flex-col h-screen relative">
+                <div
+                    class="p-4 bg-white border-b flex justify-between items-center shadow-sm"
+                >
+                    <div>
+                        <span
+                            id="current-file-path"
+                            class="text-gray-500 font-medium"
+                            >Select a file from sidebar</span
+                        >
+                    </div>
+                    <button
+                        onclick="saveCurrentFile()"
+                        class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded shadow"
+                    >
+                        Save
+                    </button>
+                </div>
+
+                <div class="flex-1 p-4 bg-gray-50 overflow-auto">
+                    <textarea id="editor"></textarea>
+                </div>
+            </div>
+
+            <!-- Modal for New File -->
+            <div
+                id="new-file-modal"
+                class="hidden absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+            >
+                <div class="bg-white p-6 rounded-lg shadow-xl w-96">
+                    <h2 class="text-lg font-bold mb-4">Create New Document</h2>
+
+                    <div class="mb-4">
+                        <label
+                            class="block text-sm font-medium text-gray-700 mb-1"
+                            >Folder (Category)</label
+                        >
+                        <input
+                            type="text"
+                            id="new-folder"
+                            placeholder="e.g. tutorial or writeup"
+                            class="w-full border rounded p-2 focus:ring-2 focus:ring-blue-500 outline-none"
+                        />
+                        <p class="text-xs text-gray-500 mt-1">
+                            Leave empty for root, or type a new folder name
+                        </p>
+                    </div>
+
+                    <div class="mb-4">
+                        <label
+                            class="block text-sm font-medium text-gray-700 mb-1"
+                            >File Name</label
+                        >
+                        <input
+                            type="text"
+                            id="new-filename"
+                            placeholder="e.g. my-awesome-post"
+                            class="w-full border rounded p-2 focus:ring-2 focus:ring-blue-500 outline-none"
+                        />
+                    </div>
+
+                    <div class="flex justify-end gap-2">
+                        <button
+                            onclick="closeModal()"
+                            class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded"
+                        >
+                            Cancel
+                        </button>
+                        <button
+                            onclick="createNewFile()"
+                            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                        >
+                            Create
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Toast Notification -->
+            <div
+                id="toast"
+                class="hidden fixed bottom-4 right-4 bg-gray-800 text-white px-4 py-2 rounded shadow-lg transition-opacity duration-300"
+            >
+                Message
+            </div>
+        </div>
+
+        <script>
+            let easymde = new EasyMDE({
+                element: document.getElementById('editor'),
+                spellChecker: false,
+                renderingConfig: {
+                    singleLineBreaks: false,
+                    codeSyntaxHighlighting: true,
+                },
+                status: ['autosave', 'lines', 'words', 'cursor', 'preview'],
+                sideBySideFullscreen: false,
+            });
+
+            // Make EasyMDE responsive and side-by-side by default when toggled
+            easymde.toggleSideBySide();
+
+            let currentFolder = '';
+            let currentFile = '';
+
+            async function loadStructure() {
+                const res = await fetch('/api/structure');
+                const data = await res.json();
+
+                const container = document.getElementById('file-structure');
+                let html = '';
+
+                for (const folder in data) {
+                    const title =
+                        folder === 'root'
+                            ? '📝 Root Documents'
+                            : `📁 ${folder}`;
+                    html += `<div class="mb-3 font-semibold text-gray-300">${title}</div>`;
+                    html += `<ul class="mb-4 pl-4 space-y-1">`;
+                    data[folder].forEach((file) => {
+                        html += `<li>
+                        <button onclick="loadFile('${folder}', '${file}')" class="text-gray-400 hover:text-white hover:underline text-left w-full truncate">
+                            📄 ${file}
+                        </button>
+                    </li>`;
+                    });
+                    if (data[folder].length === 0) {
+                        html += `<li class="text-gray-600 italic">Empty</li>`;
+                    }
+                    html += `</ul>`;
+                }
+                container.innerHTML = html;
+            }
+
+            async function loadFile(folder, filename) {
+                currentFolder = folder;
+                currentFile = filename;
+
+                document.getElementById('current-file-path').textContent =
+                    `Editing: ${folder === 'root' ? '/' : '/' + folder + '/'}${filename}`;
+
+                const res = await fetch(
+                    `/api/file?folder=${folder}&filename=${filename}`
+                );
+                if (res.ok) {
+                    const data = await res.json();
+                    easymde.value(data.content);
+                }
+            }
+
+            async function saveCurrentFile() {
+                if (!currentFile) return showToast('No file selected!', true);
+
+                const content = easymde.value();
+                const res = await fetch('/api/file', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        folder: currentFolder,
+                        filename: currentFile,
+                        content: content,
+                    }),
+                });
+
+                if (res.ok) {
+                    showToast('File saved successfully!');
+                } else {
+                    showToast('Failed to save file.', true);
+                }
+            }
+
+            function showNewFileModal() {
+                document
+                    .getElementById('new-file-modal')
+                    .classList.remove('hidden');
+            }
+
+            function closeModal() {
+                document
+                    .getElementById('new-file-modal')
+                    .classList.add('hidden');
+                document.getElementById('new-folder').value = '';
+                document.getElementById('new-filename').value = '';
+            }
+
+            async function createNewFile() {
+                const folder = document
+                    .getElementById('new-folder')
+                    .value.trim();
+                const filename = document
+                    .getElementById('new-filename')
+                    .value.trim();
+
+                if (!filename) return alert('Filename is required');
+
+                const res = await fetch('/api/file', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        folder: folder || 'root',
+                        filename: filename.endsWith('.md')
+                            ? filename
+                            : filename + '.md',
+                        content: '# New Document\n\nStart typing here...',
+                    }),
+                });
+
+                if (res.ok) {
+                    closeModal();
+                    loadStructure();
+                    currentFolder = folder || 'root';
+                    currentFile = filename.endsWith('.md')
+                        ? filename
+                        : filename + '.md';
+                    easymde.value('# New Document\n\nStart typing here...');
+                    document.getElementById('current-file-path').textContent =
+                        `Editing: ${folder === 'root' ? '/' : '/' + folder + '/'}${currentFile}`;
+                    showToast('File created!');
+                }
+            }
+
+            async function syncGit() {
+                const btn = document.getElementById('syncBtn');
+                btn.textContent = 'Syncing...';
+                btn.disabled = true;
+                try {
+                    const res = await fetch('/api/sync', { method: 'POST' });
+                    if (res.ok) showToast('Git Pull successful');
+                    else showToast('Git Pull failed', true);
+                } catch (e) {
+                    showToast('Error executing git pull', true);
+                } finally {
+                    btn.textContent = 'Git Pull (Sync)';
+                    btn.disabled = false;
+                }
+            }
+
+            function showToast(msg, isError = false) {
+                const toast = document.getElementById('toast');
+                toast.textContent = msg;
+                toast.className = `fixed bottom-4 right-4 px-4 py-2 rounded shadow-lg transition-opacity duration-300 z-50 ${isError ? 'bg-red-500' : 'bg-emerald-500'} text-white`;
+                toast.classList.remove('hidden');
+                setTimeout(() => toast.classList.add('hidden'), 3000);
+            }
+
+            // Init
+            loadStructure();
+        </script>
+    </body>
+</html>
