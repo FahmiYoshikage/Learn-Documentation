@@ -10,41 +10,36 @@ hero:
         alt: Coding Animation
     actions:
         - theme: brand
-          text: 🐳 Explore Docker
+          text: Explore Docker
           link: /docker/
         - theme: alt
-          text: 📇 RE & Binex
+          text: RE & Binex
           link: /RE-Binex/
         - theme: alt
-          text: 📖 Baca Panduan
+          text: Baca Panduan
           link: /tutorial/panduan-vitepress
 
 features:
-    - icon: 📚
-      title: Anything & Everything
+    - title: Anything & Everything
       details: Random notes, tips, and tricks. Termasuk setup NPM, Cloudflare, dan dokumentasi lain-lain yang bermanfaat.
       link: /anything/wildcard-certificate
-      linkText: Explore More →
-    - icon: 📇
-      title: RE & Binary Exploitation
+      linkText: Explore More
+    - title: RE & Binary Exploitation
       details: Journey to Binary Exploitation! C programming, memory layout, buffer overflow, ret2win, hingga shellcode injection.
       link: /RE-Binex/
-      linkText: Hack The Stack →
-    - icon: 🐳
-      title: Docker & DevOps
+      linkText: Hack The Stack
+    - title: Docker & DevOps
       details: Containerization, CI/CD workflows, deployment strategies. Dari basic commands hingga orchestration dengan Docker Compose.
       link: /docker/
-      linkText: Start Learning →
-    - icon: 🏴‍☠️
-      title: CTF Writeups
+      linkText: Start Learning
+    - title: CTF Writeups
       details: Solutions dan write-ups untuk challenge CTF, teknik exploitation, dan analysis tools untuk cybersecurity competitions.
       link: /writeup/
-      linkText: Read Writeups →
-    - icon: 📖
-      title: VitePress Docs
+      linkText: Read Writeups
+    - title: VitePress Docs
       details: Meta-documentation! Panduan lengkap membuat wiki seperti ini dengan VitePress, hosting gratis, dan best practices.
       link: /tutorial/panduan-vitepress
-      linkText: Lihat Panduan →
+      linkText: Lihat Panduan
 ---
 
 <style>
@@ -311,4 +306,3 @@ Kalau catatan ini bisa membantu orang lain yang sedang belajar, why not? Open kn
     <a href="/tutorial/panduan-vitepress" class="cta-button secondary" style="color: var(--vp-c-brand-1) !important;">Baca Panduan</a>
   </div>
 </div>
-
