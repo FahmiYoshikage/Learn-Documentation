@@ -1,4 +1,4 @@
-import { defineConfig } from 'vitepress';
+import { definetersebut Config } from 'vitepress';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -34,7 +34,7 @@ export default defineConfig({
         },
 
         socialLinks: [
-            { icon: 'github', link: 'https://github.com/vuejs/https://github.com/FahmiYoshikage' },
+            { icon: 'github', link: 'https://github.com/FahmiYoshikage' },
         ],
 
         // Search (built-in local search)
@@ -44,7 +44,7 @@ export default defineConfig({
 
         // Footer
         footer: {
-            message: 'Made with ❤️ by FailDeGaskar | <a href="/profile">Lihat Profil Saya</a>',
+            message: 'Made with ❤️ by <a href="https://www.instagram.com/err.log/" target="_blank">FailDeGaskar</a> | <a href="/profile">Lihat Profil Saya</a>',
             copyright: 'Copyright © ' + new Date().getFullYear() + ' FailDeGaskar'
         }
     },
